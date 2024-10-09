@@ -1,0 +1,98 @@
+//create users
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "ibnu wildan",
+    "email": "ibnuwildann@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// get all users
+GET http://localhost:5000/users
+
+###
+//get single user 
+
+GET http://localhost:5000/users/fa94c0b5-6e76-4479-92b8-086e1a2a202a
+
+###
+GET http://localhost:5000/me
+
+###
+//update user
+PATCH  http://localhost:5000/users/e5e963f0-cbc5-42d8-8531-db8ccc41ecfe
+Content-Type: application/json
+
+{
+    "name": "indah update",
+    "email": "indahkumalaa@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//delete user
+DELETE   http://localhost:5000/users/e5e963f0-cbc5-42d8-8531-db8ccc41ecfe
+
+###
+//Login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    
+    "email": "ibnuwildann@gmail.com",
+    "password": "123456"
+}
+###
+// Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    
+    "email": "indahkumalaa@gmail.com",
+    "password": "123456"
+}
+
+
+###
+//logout
+DELETE  http://localhost:5000/logout
+
+###
+//get all product
+GET http://localhost:5000/products
+
+###
+//get  product by id
+GET http://localhost:5000/products/1b836cca-8140-418a-8377-f3238aa50bd9
+
+###
+// create product 
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "product 6",
+    "price": 555
+}
+
+###
+// update product 
+PATCH  http://localhost:5000/products/9b8d1a97-8d13-43cd-a730-2bf31332429a
+Content-Type: application/json
+
+{
+    "name": "product 2 update",
+    "price":  858585
+}
+
+###
+//delete product
+DELETE   http://localhost:5000/products/1b836cca-8140-418a-8377-f3238aa50bd9
