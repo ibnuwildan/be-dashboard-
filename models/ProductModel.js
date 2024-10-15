@@ -28,6 +28,10 @@ const Products = db.define('product', {
             notEmpty: true,
         }
     },
+    image: {  // Kolom baru untuk menyimpan path gambar
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     userId: {
         type: DataTypes.INTEGER,
         allowNull: false,

@@ -6,7 +6,7 @@ export const getUsers = async(req, res) => {
         const response = await Users.findAll({
             attributes: ['uuid', 'name','email', 'role']
         });
-        res.status(200).json({response})
+        res.status(200).json(response)
     } catch (error) {
         res.status(500).json({msg: error.message})
     }
@@ -25,6 +25,7 @@ export const getUserById = async(req, res) => {
         res.status(500).json({msg: error.message})
     }
 }
+
 export const createUser = async(req, res) => {
     const {name, email, password, confPassword, role } = req.body;
     // Cek apakah password dan konfirmasi password sesuai
